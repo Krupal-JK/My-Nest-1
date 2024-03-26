@@ -7,6 +7,6 @@ import { UserGuard } from './users/users.guard';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   // app.useGlobalGuards(new UserGuard())
-  await app.listen(8000);
+  await app.listen(process.env.PORT);
 }
 bootstrap();
